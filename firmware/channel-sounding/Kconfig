@@ -1,0 +1,64 @@
+menu "Channel sounding app"
+
+choice APP_ROLE
+	prompt "Role of this board"
+	default APP_ROLE_INITIATOR
+
+config APP_ROLE_INITIATOR
+	bool "Initiator"
+	help
+	  Scans for the reflector, connects, runs Channel Sounding and works
+	  out the distance. Results are printed on its UART.
+
+config APP_ROLE_REFLECTOR
+	bool "Reflector"
+	help
+	  Advertises, accepts the connection and answers the sounding.
+	  It does not compute a distance itself.
+
+endchoice
+
+config APP_PEER_NAME
+	string "Advertised name of the reflector"
+	default "cs-reflector"
+	help
+	  The reflector advertises this name and the initiator only connects
+	  to a device with this exact name, so it never connects to an
+	  unrelated device.
+
+if APP_ROLE_INITIATOR
+
+choice APP_STEP_MODE
+	prompt "Channel Sounding step mode"
+	default APP_STEP_MODE_2_SUB_1
+
+config APP_STEP_MODE_2_SUB_1
+	bool "Mode 2 with mode 1 sub steps (phase + round trip time)"
+
+config APP_STEP_MODE_2
+	bool "Mode 2 only (phase based ranging)"
+
+config APP_STEP_MODE_1
+	bool "Mode 1 only (round trip time)"
+
+endchoice
+
+config APP_PROCEDURE_INTERVAL
+	int "Connection events between two CS procedures"
+	default 10
+	range 2 100
+	help
+	  With a 20 ms connection interval, 10 means one distance about
+	  every 200 ms. Lower is faster but each procedure has less time.
+
+endif
+
+config APP_POWER_BANK_LOAD
+	bool "Draw extra current so a power bank does not switch off"
+	help
+	  Keeps the CPU awake and lights the spare LEDs. This adds only a few
+	  mA, but some power banks switch off when the load is close to zero.
+
+endmenu
+
+source "Kconfig.zephyr"

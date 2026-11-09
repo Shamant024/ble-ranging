@@ -1,0 +1,6 @@
+# nRF54L is single core, the radio controller runs next to the app.
+# No partition manager needed on the secure build.
+config PARTITION_MANAGER
+	default n if !BOARD_IS_NON_SECURE
+
+source "share/sysbuild/Kconfig"
