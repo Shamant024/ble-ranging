@@ -1,0 +1,5 @@
+placement,distance_m,start_s,end_s,condition,note
+1.30m_1,1.30,12.001,57.402,clear,
+2.50m_1,2.50,57.402,96.538,clear,link dropped about 2 s after placement
+2.50m_2,2.50,96.538,131.792,clear,
+3.50m_1,3.50,131.792,140.292,clear,link dropped about 9 s after placement

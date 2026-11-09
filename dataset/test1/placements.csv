@@ -1,0 +1,16 @@
+session,placement,distance_m,start_s,end_s,condition,note
+a,0.48m_1,0.48,118.134,128.134,clear,
+a,1.10m_1,1.10,250.134,260.134,clear,distance approximate
+a,2.00m_1,2.00,353.134,363.134,clear,distance approximate
+a,0.62m_1,0.62,1177.134,1237.134,clear,
+a,1.30m_1,1.30,1343.134,1348.134,person next to the reflector,
+a,2.50m_1,2.50,1543.134,1553.134,clear,spot A
+a,3.81m_1,3.81,1777.134,1787.134,clear,
+a,3.81m_2,3.81,1884.134,1914.134,clear,"same spot later, signal 11 dB weaker"
+a,2.50m_2,2.50,2043.134,2053.134,clear,"spot B, a different position at the same distance"
+a,8.23m_1,8.23,2216.134,2226.134,clear,
+a,8.23m_2,8.23,2246.134,2266.134,clear,repeat
+a,8.23m_3,8.23,2299.134,2307.134,person standing between the boards,
+a,12.19m_1,12.19,2397.134,2407.134,clear,
+a,12.19m_2,12.19,2454.134,2464.134,person walking between the boards,
+a,1.20m_1,1.20,2595.134,2605.134,person next to the reflector,

@@ -1,0 +1,15 @@
+placement,distance_m,start_s,end_s,condition,note
+0.60m_1,0.60,23.109,66.711,clear,
+0.60m_2,0.60,66.711,110.003,clear,signal about 15 dB weaker than the other 0.60 m placements; cause not recorded
+1.30m_1,1.30,110.003,144.404,clear,
+1.30m_2,1.30,144.404,183.514,clear,
+0.60m_3,0.60,183.514,226.407,clear,
+2.50m_1,2.50,226.407,256.916,clear,
+2.50m_2,2.50,256.916,297.917,clear,
+3.50m_1,3.50,297.917,340.118,clear,
+3.50m_2,3.50,340.118,453.121,clear,
+8.23m_1,8.23,453.121,491.322,clear,
+8.23m_2,8.23,491.322,527.214,clear,
+8.23m_3,8.23,527.214,593.725,person standing between the boards,
+12.19m_1,12.19,593.725,623.433,clear,
+12.19m_2,12.19,623.433,667.237,clear,
